@@ -1,0 +1,156 @@
+@import url("https://fonts.googleapis.com/css2?family=Karla:wght@200&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap");
+
+img {
+  width: 100%;
+  height: 100%;
+}
+
+/* ----------- Large Screen ---------- */
+.home {
+  // background-color: Red;
+  width: 100vw;
+  max-height: 100vh;
+  display: flex;
+  justify-content: space-between;
+
+  /***** Left *****/
+  .home-left {
+    // background: Yellow;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: left;
+    // max-width: 65%;
+
+    /****** TOP of left ******/
+    .home-left--top {
+      // background: Green;
+      margin-top: 20vmin;
+      margin-left: 25vmin;
+
+      /****** Header ******/
+      .header-up,
+      .header-down {
+        font-size: 5vmin;
+      }
+      .header-down {
+        .escape-chars {
+          font-family: "Karla", sans-serif;
+          color: red;
+          font-weight: bold;
+        }
+      }
+
+      .header-center {
+        font-family: "Montserrat", sans-serif;
+        font-size: 6vmin;
+
+        &:hover {
+          color: #ff0000;
+          -webkit-transition: color 150ms linear;
+          -ms-transition: color 150ms linear;
+          transition: color 150ms linear;
+        }
+      }
+      /****** end Header ******/
+    }
+    /****** end TOP of left ******/
+
+    /****** BOTTOM of left ******/
+    .home-left--bottom {
+      // background: gray;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      font-size: 5vmin;
+      margin-bottom: 12vmin;
+      margin-left: 25vmin;
+
+      .navbar--left-icon {
+        padding-right: 15px;
+
+        &:hover {
+          color: #ff0000;
+          -webkit-transition: color 150ms linear;
+          -ms-transition: color 150ms linear;
+          transition: color 150ms linear;
+        }
+      }
+    }
+    /****** end BOTTOM of left ******/
+  }
+  /***** end Left *****/
+
+  /***** Right *****/
+  .home-right {
+    // background: Blue;
+    // z-index: -3;
+    overflow: hidden;
+    min-width: 25;
+    min-height: 100vh;
+    padding: 8vmin;
+
+    /***** Image Hero *****/
+    .heroimage {
+      width: 55vmin;
+
+      position: fixed;
+      left: 60%;
+      bottom: 0%;
+
+      -webkit-transform: scale(0.951);
+      transform: scale(0.952);
+      -webkit-transition: 0.3s ease-in-out;
+      transition: 0.3s ease-in-out;
+
+      &:hover {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+      }
+    }
+    /***** end Image Hero *****/
+  }
+  /***** end Right *****/
+}
+/* -------- end Large Screen --------- */
+
+/* ----------- Mobile screen ---------- */
+
+@media only screen and (max-width: 415px) {
+  .home {
+    /* BACKGROUND IMAGE with FLUR AFFECT */
+    &:before {
+      content: "";
+      position: fixed;
+      left: 0;
+      right: 0;
+      z-index: -1;
+
+      background-image: url("../../assets/images/hero.png");
+      background-repeat: no-repeat;
+      width: 100%;
+      height: 100%;
+
+      -webkit-filter: blur(5px);
+      -moz-filter: blur(5px);
+      -o-filter: blur(5px);
+      -ms-filter: blur(5px);
+      filter: blur(4px);
+    }
+    z-index: 0;
+    /* end BACKGROUND IMAGE*/
+
+    .heroimage {
+      display: none;
+    }
+
+    .home-left {
+      .home-left--bottom {
+        margin-bottom: 22vmin;
+      }
+    }
+  }
+}
+/* -------- end Mobile screen --------- */

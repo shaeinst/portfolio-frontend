@@ -1,0 +1,23 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;1,300&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 16px;
+  font-family: "Lato";
+}
+
+// CHANGE CURSOR STYLE
+body::-webkit-scrollbar {
+  width: 0.15rem;
+}
+body::-webkit-scrollbar-track {
+  background: #FFFFFF;
+}
+body::-webkit-scrollbar-thumb {
+  background: #ff0000;
+}

@@ -1,0 +1,35 @@
+.navbar {
+  // margin-left: 5rem;
+  // margin-right: 5rem;
+  background: red;
+
+  // ***** LEFT SIDE *****//
+  .navbar--left {
+    .navbar--left-icon {
+      cursor: pointer;
+      background: blue;
+    }
+  }
+  // ********************//
+
+  // ***** RIGHT SIDE *****//
+  .navbar--right {
+    background: gray;
+
+    .navbar--right-items {
+      // background: green;
+      list-style: none;
+
+      .navbar--right-item {
+        cursor: pointer;
+
+        .dot {
+        }
+
+        .active-dot {
+        }
+      }
+    }
+  }
+  // ********************//
+}
